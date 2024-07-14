@@ -2,38 +2,28 @@ import { Text, View, Dimensions, StyleSheet } from "react-native";
 import APCarousel from "@/components/APCarousel";
 import { PaperProvider, Searchbar } from "react-native-paper";
 import { useState } from "react";
+import APSearchBar from "@/components/APSearchBar";
+import FilterList from "@/components/FilterList";
 
 export default function Index() {
   
-  const [searchQuery, setSearchQuery] = useState('');
   return (
     <PaperProvider>
       <View
-        style={{
-          flex: 1,
-          justifyContent: 'space-evenly',
-          alignItems: "center",
-        }}
+        style={styles.container}
       >
-        <Searchbar
-          placeholder="Search AlphabetPharma"
-          onChangeText={setSearchQuery}
-          value={searchQuery}
-          style={
-            {
-              marginVertical:20
-            }
-          }
-
-        />
-        <APCarousel style={styles.Banner}/>
+        <APSearchBar/>
+        <FilterList/>
+        <APCarousel/>
       </View>
     </PaperProvider>
   );
 }
 
 const styles = StyleSheet.create({
-  Banner: {
-    marginVertical: 20
+  container: {
+    flexDirection: 'column',
+    // justifyContent: 'center',
+    alignItems: "center",
   }
 })
