@@ -10,6 +10,11 @@
     "preview": {
       "distribution": "internal"
     },
+    "pixel7_local":{
+      "android": {
+        "buildType": "apk"
+      }
+    },
     "production": {}
   },
   "submit": {

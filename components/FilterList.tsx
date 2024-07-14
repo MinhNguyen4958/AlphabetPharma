@@ -5,7 +5,7 @@ export default function FilterList() {
     return (
         <FlatList
         horizontal
-        data={[...new Array(5).keys()]}
+        data={[...new Array(6).keys()]}
         contentContainerStyle={styles.listContainer}
         showsHorizontalScrollIndicator={false}
         renderItem={({index}) => (
@@ -23,7 +23,8 @@ export default function FilterList() {
 const styles = StyleSheet.create({
     listContainer: {
         paddingVertical: 5,
+        paddingLeft: 5,
+        marginTop: 5,
         marginBottom: 15,
-        paddingHorizontal: 6
     }
 })
