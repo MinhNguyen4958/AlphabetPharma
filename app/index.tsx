@@ -1,19 +1,39 @@
-import { Text, View, Dimensions } from "react-native";
-import Carousel from "react-native-reanimated-carousel";
+import { Text, View, Dimensions, StyleSheet } from "react-native";
 import APCarousel from "@/components/APCarousel";
+import { PaperProvider, Searchbar } from "react-native-paper";
+import { useState } from "react";
 
 export default function Index() {
-  const width = Dimensions.get('window').width;
+  
+  const [searchQuery, setSearchQuery] = useState('');
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-      <APCarousel/>
-    </View>
+    <PaperProvider>
+      <View
+        style={{
+          flex: 1,
+          justifyContent: 'space-evenly',
+          alignItems: "center",
+        }}
+      >
+        <Searchbar
+          placeholder="Search AlphabetPharma"
+          onChangeText={setSearchQuery}
+          value={searchQuery}
+          style={
+            {
+              marginVertical:20
+            }
+          }
+
+        />
+        <APCarousel style={styles.Banner}/>
+      </View>
+    </PaperProvider>
   );
 }
+
+const styles = StyleSheet.create({
+  Banner: {
+    marginVertical: 20
+  }
+})

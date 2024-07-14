@@ -2,7 +2,7 @@ import { Dimensions, View, Image, StyleSheet } from 'react-native';
 import Carousel from 'react-native-reanimated-carousel';
 import {useState} from "react";
 
-export default function APCarousel() {
+export default function APCarousel({style}) {
     const width = Dimensions.get('window').width;
     const [banner] = useState([
         require('../assets/images/jose_wallpaper.png'),
@@ -16,6 +16,7 @@ export default function APCarousel() {
         height={width/2}
         autoPlay={true}
         data={banner}
+        style={style}
         scrollAnimationDuration={1000}
         renderItem={({item, index}) => (
             <View style={styles.imageContainer}>
