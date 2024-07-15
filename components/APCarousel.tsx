@@ -19,7 +19,7 @@ export default function APCarousel() {
         style={styles.banner}
         scrollAnimationDuration={1000}
         renderItem={({item, index}) => (
-            <View style={styles.imageContainer}>
+            <View >
                 <Image source={item} key={index} style={styles.image}/>
             </View>
             

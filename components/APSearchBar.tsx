@@ -17,6 +17,6 @@ export default function APSearchBar() {
 const styles = StyleSheet.create({
     container: {
         marginTop: 20,
-        paddingHorizontal: 6
+        marginHorizontal: 5
     }
 })
