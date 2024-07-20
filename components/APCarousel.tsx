@@ -16,8 +16,8 @@ export default function APCarousel() {
         height={width/2}
         autoPlay={true}
         data={banner}
-        style={styles.banner}
         scrollAnimationDuration={1000}
+        style={styles.banner}
         renderItem={({item, index}) => (
             <View >
                 <Image source={item} key={index} style={styles.image}/>
@@ -33,13 +33,9 @@ const styles = StyleSheet.create({
         width: Dimensions.get('window').width,
         height: Dimensions.get('window').width / 2,
     },
-    imageContainer: {
-        flex: 1,
-        borderWidth:.5,
-        justifyContent: 'center'
-    },
     banner: {
         marginTop: 10,
-        marginBottom: 20
+        marginBottom: 10,
+        zIndex: 1
       }
 })

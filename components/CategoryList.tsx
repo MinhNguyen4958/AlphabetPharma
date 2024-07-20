@@ -7,8 +7,9 @@ export default function CategoryList() {
       horizontal
       data={[...new Array(6).keys()]}
       showsHorizontalScrollIndicator={false}
+      style={styles.listContainer}
       renderItem={({index}) => (
-        <Card style={{marginRight: 5}}>
+        <Card style={{marginRight: 10, marginBottom:5}}>
           <Card.Cover source={{ uri: 'https://picsum.photos/700' }} />
           <Card.Title title={`Card ${index}`} subtitle="Card Subtitle"/>
           <Card.Actions>
@@ -23,9 +24,7 @@ export default function CategoryList() {
 
 const styles = StyleSheet.create({
   listContainer: {
-    paddingVertical: 5,
     paddingLeft: 5,
-    marginTop: 50,
-    marginBottom: 15,
+    marginVertical: 15,
   }
 })

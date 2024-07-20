@@ -2,6 +2,7 @@ import { FlatList, StyleSheet } from 'react-native';
 import { Button } from 'react-native-paper';
 
 export default function FilterList() {
+
     return (
         <FlatList
         horizontal
