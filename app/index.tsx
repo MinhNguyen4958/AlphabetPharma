@@ -1,6 +1,6 @@
-import { Text, FlatList, ScrollView, Dimensions, StyleSheet, SafeAreaView } from "react-native";
+import {FlatList, ScrollView, Dimensions, StyleSheet, SafeAreaView } from "react-native";
 import APCarousel from "@/components/APCarousel";
-import { PaperProvider, Searchbar } from "react-native-paper";
+import {Text} from "react-native-paper";
 import { useState } from "react";
 import APSearchBar from "@/components/APSearchBar";
 import FilterList from "@/components/FilterList";
@@ -31,6 +31,7 @@ export default function Index() {
         <APSearchBar/>
         <FilterList/>
         <APCarousel/>
+        <Text>Test</Text>
         <CategoryList/>
         <CategoryList/>
         <CategoryList/>
