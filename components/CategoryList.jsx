@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import { FlatList, StyleSheet } from 'react-native'
 import { Button, Card, Text } from 'react-native-paper';
+import {ItemModal} from '@/components/ItemModal';
 
-export default function CategoryList() {
+export default function CategoryList({onPress}) {
+
     return (
       <FlatList
       horizontal
@@ -14,7 +17,7 @@ export default function CategoryList() {
           <Card.Title title={`Card ${index}`} subtitle="Card Subtitle"/>
           <Card.Actions>
             <Button>Cancel</Button>
-            <Button onPress={() => console.log(`Card Button ${index} pressed`)}>Ok</Button>
+            <Button onPress={onPress}>Ok</Button>
           </Card.Actions>
         </Card>
       )}

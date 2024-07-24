@@ -1,27 +1,19 @@
-import {FlatList, ScrollView, Dimensions, StyleSheet, SafeAreaView } from "react-native";
-import APCarousel from "@/components/APCarousel";
+import { ScrollView, Dimensions, StyleSheet, SafeAreaView } from "react-native";
 import {Text} from "react-native-paper";
 import { useState } from "react";
+
 import APSearchBar from "@/components/APSearchBar";
 import FilterList from "@/components/FilterList";
 import CategoryList from "@/components/CategoryList";
+import APCarousel from "@/components/APCarousel";
+import ItemModal from "@/components/ItemModal";
+
 
 export default function Index() {
-  const data = [
-    {
-        id: "SearchBar"
-    },
-    {
-      id: "filter"
-    },
-    {
-      id: "category"
-    },    
-    {
-      id: "category"
-    },
-
-]
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const onModalClose = () => {
+    setIsModalVisible(false);
+  }
   return (
     <SafeAreaView>
       <ScrollView 
@@ -32,9 +24,10 @@ export default function Index() {
         <FilterList/>
         <APCarousel/>
         <Text>Test</Text>
-        <CategoryList/>
-        <CategoryList/>
-        <CategoryList/>
+        <CategoryList onPress={() => setIsModalVisible(true)}/>
+        <CategoryList onPress={() => setIsModalVisible(true)}/>
+        <CategoryList onPress={() => setIsModalVisible(true)}/>
+        <ItemModal isVisible={isModalVisible} onClose={onModalClose}/>
       </ScrollView>
     </SafeAreaView>
       
