@@ -5,9 +5,10 @@ import {useState} from "react";
 export default function APCarousel() {
     const width = Dimensions.get('window').width;
     const [banner] = useState([
-        require('../assets/images/jose_wallpaper.png'),
-        require('../assets/images/p3r-all-out-cards.png'),
-        require('../assets/images/the gang.png'),
+        { uri: 'https://picsum.photos/700' },
+        { uri: 'https://picsum.photos/701' },
+        { uri: 'https://picsum.photos/702' },
+        { uri: 'https://picsum.photos/703' }
     ])
     return (
         <Carousel

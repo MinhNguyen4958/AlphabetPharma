@@ -12,12 +12,11 @@ export default function CategoryList({onPress}) {
       showsHorizontalScrollIndicator={false}
       style={styles.listContainer}
       renderItem={({index}) => (
-        <Card style={{marginRight: 10, marginBottom:5}}>
+        <Card style={{marginRight: 10, marginBottom:5, width: 180}}>
           <Card.Cover source={{ uri: 'https://picsum.photos/700' }} />
           <Card.Title title={`Card ${index}`} subtitle="Card Subtitle"/>
           <Card.Actions>
-            <Button>Cancel</Button>
-            <Button onPress={onPress}>Ok</Button>
+            <Button onPress={onPress} mode='contained' style={{ width: "100%" }}>View Item</Button>
           </Card.Actions>
         </Card>
       )}
