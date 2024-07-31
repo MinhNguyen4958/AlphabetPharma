@@ -14,6 +14,9 @@ export default function Index() {
   const onModalClose = () => {
     setIsModalVisible(false);
   }
+  const onModalOpen = () => {
+    setIsModalVisible(true)
+  }
   return (
     <SafeAreaView>
       <ScrollView 
@@ -24,9 +27,9 @@ export default function Index() {
         <FilterList/>
         <APCarousel/>
         <Text>Test</Text>
-        <CategoryList onPress={() => setIsModalVisible(true)}/>
-        <CategoryList onPress={() => setIsModalVisible(true)}/>
-        <CategoryList onPress={() => setIsModalVisible(true)}/>
+        <CategoryList onPress={onModalOpen}/>
+        <CategoryList onPress={onModalOpen}/>
+        <CategoryList onPress={onModalOpen}/>
         <ItemModal isVisible={isModalVisible} onClose={onModalClose}/>
       </ScrollView>
     </SafeAreaView>
