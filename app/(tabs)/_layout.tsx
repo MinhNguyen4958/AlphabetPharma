@@ -69,13 +69,23 @@ export default function MyComponent() {
         }}
       />
       <Tab.Screen
-        name="Settings"
-        component={SettingsScreen}
+        name="Cart"
+        component={CartScreen}
         options={{
-          tabBarLabel: 'Settings',
+          tabBarLabel: 'Cart',
           tabBarIcon: ({ color, size }) => {
-            return <Icon name="cog" size={size} color={color} />;
+            return <Icon name="cart" size={size} color={color} />;
           },
+        }}
+      />
+      <Tab.Screen
+        name='User'
+        component={UserScreen}
+        options={{
+            tabBarLabel: "User",
+            tabBarIcon: ({color, size}) => {
+                return <Icon name="account" size={size} color={color}/>;
+            }
         }}
       />
     </Tab.Navigator>
@@ -83,13 +93,21 @@ export default function MyComponent() {
 }
 
 
-function SettingsScreen() {
+function CartScreen() {
   return (
     <View style={styles.container}>
-      <Text variant="headlineMedium">Settings!</Text>
+      <Text variant="headlineMedium">Cart!</Text>
     </View>
   );
 }
+
+function UserScreen() {
+    return (
+      <View style={styles.container}>
+        <Text variant="headlineMedium">User!</Text>
+      </View>
+    );
+  }
 
 const styles = StyleSheet.create({
   container: {
