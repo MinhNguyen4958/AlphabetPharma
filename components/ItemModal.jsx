@@ -57,13 +57,13 @@ export default function ItemModal({isVisible, onClose}) {
                             contentContainerStyle={styles.listContainer}/>
                         
                         <Text variant="bodyLarge" style={{ marginHorizontal: 10 , color:'black'}}>Product Code: A465540023</Text>
-                        <Dropdown
+                        {/* <Dropdown
                             label={"Quantity"}
                             placeholder='Select Quantity'
                             options={OPTIONS}
                             value={currentValue}
                             onSelect={setCurrentValue}
-                        />
+                        /> */}
                         <Button mode="contained" style={{ marginHorizontal: 10 , marginTop: '15%', marginBottom: 30}}>Add to cart</Button>
                     </ScrollView>
                 </View>

@@ -7,7 +7,7 @@ import { Text, BottomNavigation } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import Index from '.';
-
+import User from './user';
 const Tab = createBottomTabNavigator();
 
 export default function MyComponent() {
@@ -64,7 +64,7 @@ export default function MyComponent() {
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({ color, size }) => {
-            return <Icon name="home" size={size} color={color} />;
+            return <Icon name="home-outline" size={size} color={color} />;
           },
         }}
       />
@@ -74,17 +74,17 @@ export default function MyComponent() {
         options={{
           tabBarLabel: 'Cart',
           tabBarIcon: ({ color, size }) => {
-            return <Icon name="cart" size={size} color={color} />;
+            return <Icon name="cart-outline" size={size} color={color} />;
           },
         }}
       />
       <Tab.Screen
         name='User'
-        component={UserScreen}
+        component={User}
         options={{
             tabBarLabel: "User",
             tabBarIcon: ({color, size}) => {
-                return <Icon name="account" size={size} color={color}/>;
+                return <Icon name="account-outline" size={size} color={color}/>;
             }
         }}
       />
