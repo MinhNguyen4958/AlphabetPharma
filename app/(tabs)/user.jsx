@@ -4,10 +4,9 @@ import { useRef, useState } from 'react';
 
 export default function User() {
 
-  const [EmailTxt, setEmailTxt] = useState("");
-  const [PwTxt, setPwText] = useState("");
-  const [isPwSecure, setIsPwSecure] = useState(true);
-  const inputRef = useRef(null)
+  const [Email, setEmail] = useState("");
+  const [Password, setPassword] = useState("");
+  const [isPasswordSecure, setIsPasswordSecure] = useState(true);
   
   const dismissKeyboard = () => {
     Keyboard.dismiss();
@@ -18,16 +17,16 @@ export default function User() {
         <TextInput 
           mode='outlined'
           label="Email" 
-          onChangeText={() => setEmailTxt(EmailTxt)}
+          onChangeText={() => setEmail(Email)}
         />
         <TextInput 
           mode='outlined'
           label="Password"
-          secureTextEntry={isPwSecure} 
-          onChangeText={() => setEmailTxt(EmailTxt)}
+          secureTextEntry={isPasswordSecure} 
+          onChangeText={() => setPassword(Password)}
           right={
             <TextInput.Icon icon="eye"
-              onPress={() => {isPwSecure? setIsPwSecure(false) : setIsPwSecure(true)}}
+              onPress={() => {isPasswordSecure? setIsPasswordSecure(false) : setIsPasswordSecure(true)}}
             />}
         />
         <Button mode='contained' onPress={() => console.log("Signed In")}>Sign in</Button>

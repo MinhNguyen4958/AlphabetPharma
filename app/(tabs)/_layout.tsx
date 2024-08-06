@@ -8,6 +8,8 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import Index from '.';
 import User from './user';
+import SignUpPage from './signuppage'
+
 const Tab = createBottomTabNavigator();
 
 export default function MyComponent() {
@@ -80,7 +82,7 @@ export default function MyComponent() {
       />
       <Tab.Screen
         name='User'
-        component={User}
+        component={SignUpPage}
         options={{
             tabBarLabel: "User",
             tabBarIcon: ({color, size}) => {

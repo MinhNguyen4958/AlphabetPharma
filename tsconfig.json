@@ -13,5 +13,5 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
-, "components/ItemModal.jsx", "components/APCarousel.jsx", "components/APSearchBar.jsx", "components/CategoryList.jsx", "components/FilterList.jsx", "app/(tabs)/user.jsx"  ]
+, "components/ItemModal.jsx", "components/APCarousel.jsx", "components/APSearchBar.jsx", "components/CategoryList.jsx", "components/FilterList.jsx"  ]
 }
